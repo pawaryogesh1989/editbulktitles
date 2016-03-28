@@ -16,7 +16,7 @@ jQuery(document).ready(function () {
             bulk_counter = bulk_counter - 5;
 
             if (bulk_counter > 0) {
-                var url = bulkactionscript.pluginsUrl + "/views/edit-bulk-titles.php?id=" + allVals + "&KeepThis=true&TB_iframe=true&width=800&height=600";
+                var url = bulkactionscript.site_url + "/wp-admin/admin-ajax.php?action=edit_bulk_titles&id=" + allVals + "&KeepThis=true&TB_iframe=true&width=800&height=600";
                 tb_show("Bulk Post Rename", url);
                 return false;
             } else {

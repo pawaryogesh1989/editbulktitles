@@ -22,6 +22,11 @@ if (!class_exists('Custom_Bulk_Edit_Title')) {
             ));
             $this->bulk_post_type = $post_type;
             $this->bulk_action_init();
+
+            add_action('wp_ajax_bulk_update_post_titles', array(&$this, 'Ajax_Bulk_Update_Post_Titles'));
+            add_action('wp_ajax_nopriv_bulk_update_post_titles', array(&$this, 'Ajax_Bulk_Update_Post_Titles'));
+            add_action('wp_ajax_edit_bulk_titles', array(&$this, 'edit_bulk_titles'));
+            add_action('wp_ajax_nopriv_edit_bulk_titles', array(&$this, 'edit_bulk_titles'));
         }
 
         public function bulk_action_init() {
@@ -54,8 +59,8 @@ if (!class_exists('Custom_Bulk_Edit_Title')) {
 
                 if ($post_bulk_titles[$i] != "") {
                     $bulk_post = array(
-                        'ID' => $post_bulk_id[$i],
-                        'post_title' => $post_bulk_titles[$i],
+                        'ID' => intval($post_bulk_id[$i]),
+                        'post_title' => sanitize_text_field($post_bulk_titles[$i]),
                     );
                     wp_update_post($bulk_post);
                 }
@@ -72,6 +77,11 @@ if (!class_exists('Custom_Bulk_Edit_Title')) {
                 </div>
                 <?php
             }
+        }
+
+        public function edit_bulk_titles() {
+            require(plugin_dir_path(__DIR__) . "views/edit-bulk-titles.php");
+            exit;
         }
 
     }
