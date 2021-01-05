@@ -1,8 +1,8 @@
 === Bulk Edit Post Titles ===
 Contributors: pawaryogesh1989, clarionwpdeveloper
 Tags: bulk edit, wordpress bulk edit, bulk edit title, wordpress bulk edit title, bulk edit post title, bulk edit page title, post title bulk edit, wordpress bulk edit post title, bulk update post titles, bulk update titles
-Requires at least: 4.6 or higher
-Tested up to: 5.2.4
+Requires at least: 5.0 or higher
+Tested up to: 5.6
 Stable tag: 5.0
 PHP Version: 5.6 or higher
 License: GPLv2 or later
@@ -32,6 +32,9 @@ This plugin enabled bulk edit of post titles, page titles and Custom Post Titles
 6. screenshot-6 - Save or discard the changes.
 
 == Changelog ==
+
+= 5.0.0 =
+* Compatibility changes to make it work with latest WordPress version.
 
 = 4.0.0 =
 * Added Configuration Menu to manage bulk edit settings.

@@ -3,7 +3,7 @@
   Plugin Name: Bulk Edit Post Titles
   Plugin URI: http://clariontech.com
   Description: Bulk Edit Post Titles
-  Version: 4.0.0
+  Version: 5.0.0
   Author: Yogesh Pawar, Clarion Technologies
   Author URI: http://clariontech.com
   License: GPLv2 or later
